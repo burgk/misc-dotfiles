@@ -1,0 +1,22 @@
+---
+- hosts: localhost
+  vars:
+    upper_bool: True
+    lower_bool: false
+    quote_false: "false"
+    empty_str: ''
+    yes_var: yes
+    yes_str: "yes"
+    cap_yes: Yes
+    num_yes: 1
+    num_no: 0
+  tasks:
+    - debug: msg="upper_bool [True] {{ ':' }} Logical value is {{ 'True' if upper_bool else 'False' }}"
+    - debug: msg="lower_bool [false] {{ ':' }} Logical value is {{ 'True' if lower_bool else 'False' }}"
+    - debug: msg="quote_false [\"false\"] {{ ':' }} Logical value is {{ 'True' if quote_false else 'False' }}"
+    - debug: msg="emty_str [ \'\' ] {{ ':' }} Logical value is {{ 'True' if empty_str else 'False' }}"
+    - debug: msg="yes_var [yes]  {{ ':' }} Logical value is {{ 'True' if yes_var else 'False' }}"
+    - debug: msg="yes_str [\"yes\"] {{ ':' }} Logical value is {{ 'True' if yes_str else 'False' }}"
+    - debug: msg="cap_yes [Yes] {{ ':' }} Logical value is {{ 'True' if cap_yes else 'False' }}"
+    - debug: msg="num_yes [1] {{ ':' }} Logical value is {{ 'True' if num_yes else 'False' }}"
+    - debug: msg="num_no [0] {{ ':' }} Logical value is {{ 'True' if num_no else 'False' }}"
