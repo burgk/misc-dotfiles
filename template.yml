@@ -1,7 +1,0 @@
----
-- hosts: localhost
-  tasks:
-    - name: distrib info template
-      template:
-        src: /home/burgk/GitRepos/misc-dotfiles/template.j2
-        dest: /tmp/info.txt
